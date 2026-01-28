@@ -1,0 +1,322 @@
+{
+  "flight": {
+    "flightNumber": "EE214",
+    "from": "MEL",
+    "to": "SYD",
+    "departureTime": "2026-02-12T09:30:00+11:00",
+    "aircraftType": "A320"
+  },
+  "passengers": [
+    {
+      "id": "PAX001",
+      "firstName": "Mia",
+      "lastName": "Kowalski",
+      "paxType": "ADT",
+      "seat": "1A",
+      "document": { "type": "PASSPORT", "number": "P8942331", "expiryDate": "2030-06-15" },
+      "notes": []
+    },
+    {
+      "id": "PAX002",
+      "firstName": "Daniel",
+      "lastName": "Nguyen",
+      "paxType": "ADT",
+      "seat": "1B",
+      "document": { "type": "PASSPORT", "number": "P1120459", "expiryDate": "2029-01-09" },
+      "mealPreferences": [{ "code": "VGML", "text": "Vegetarian meal" }],
+      "notes": []
+    },
+    {
+      "id": "PAX003",
+      "firstName": "Sophia",
+      "lastName": "Martinez",
+      "paxType": "ADT",
+      "seat": "2A",
+      "document": { "type": "NATIONAL_ID", "number": "VIC-5519201", "expiryDate": "2028-03-10" },
+      "specialAssistance": [{ "code": "WCHR", "text": "Wheelchair (ramp)" }],
+      "notes": []
+    },
+    {
+      "id": "PAX004",
+      "firstName": "Oliver",
+      "lastName": "Brown",
+      "paxType": "ADT",
+      "seat": "2B",
+      "document": { "type": "PASSPORT", "number": "P4455667", "expiryDate": "2025-11-01" },
+      "notes": ["Travel document expired – verify at gate"]
+    },
+    {
+      "id": "PAX005",
+      "firstName": "Ava",
+      "lastName": "Wilson",
+      "paxType": "ADT",
+      "seat": "3A",
+      "document": { "type": "PASSPORT", "number": "P3300198", "expiryDate": "2027-08-20" },
+      "notes": []
+    },
+    {
+      "id": "PAX006",
+      "firstName": "Liam",
+      "lastName": "Chen",
+      "paxType": "ADT",
+      "seat": "3B",
+      "document": { "type": "PASSPORT", "number": "P7781200", "expiryDate": "2027-02-01" },
+      "notes": ["Nervous flyer"]
+    },
+    {
+      "id": "PAX007",
+      "firstName": "Noah",
+      "lastName": "Taylor",
+      "paxType": "ADT",
+      "seat": "4A",
+      "document": { "type": "NATIONAL_ID", "number": "NSW-1029384", "expiryDate": "2026-09-12" },
+      "notes": []
+    },
+    {
+      "id": "PAX008",
+      "firstName": "Isabella",
+      "lastName": "Rossi",
+      "paxType": "ADT",
+      "seat": "4B",
+      "document": { "type": "PASSPORT", "number": "P9021447", "expiryDate": "2028-12-12" },
+      "mealPreferences": [{ "code": "GFML", "text": "Gluten-free meal" }],
+      "notes": []
+    },
+    {
+      "id": "PAX009",
+      "firstName": "Ethan",
+      "lastName": "O'Connor",
+      "paxType": "ADT",
+      "seat": "5A",
+      "document": null,
+      "notes": ["Document missing in system – ask passenger to present ID"]
+    },
+    {
+      "id": "PAX010",
+      "firstName": "Emily",
+      "lastName": "Harris",
+      "paxType": "ADT",
+      "seat": "5B",
+      "document": { "type": "PASSPORT", "number": null, "expiryDate": "2029-09-30" },
+      "notes": ["Passport number missing due to system issue – verify manually"]
+    },
+    {
+      "id": "PAX011",
+      "firstName": "Lucas",
+      "lastName": "Petrov",
+      "paxType": "ADT",
+      "seat": "6A",
+      "document": { "type": "PASSPORT", "number": "P6619023", "expiryDate": "2027-05-10" },
+      "dateOfBirth": "1991-11-03",
+      "notes": []
+    },
+    {
+      "id": "PAX012",
+      "firstName": "Amelia",
+      "lastName": "Jones",
+      "paxType": "ADT",
+      "seat": "6B",
+      "document": { "type": "NATIONAL_ID", "number": "VIC-7788120", "expiryDate": "2031-04-02" },
+      "notes": []
+    },
+    {
+      "id": "PAX013",
+      "firstName": "Jack",
+      "lastName": "Thompson",
+      "paxType": "ADT",
+      "seat": "7A",
+      "document": { "type": "PASSPORT", "number": "P1200451", "expiryDate": "2026-02-10" },
+      "notes": ["Document expires very soon – check validity rules if applicable"]
+    },
+    {
+      "id": "PAX014",
+      "firstName": "Charlotte",
+      "lastName": "White",
+      "paxType": "ADT",
+      "seat": "7B",
+      "document": { "type": "PASSPORT", "number": "P7003811", "expiryDate": "2030-03-14" },
+      "notes": []
+    },
+    {
+      "id": "PAX015",
+      "firstName": "Henry",
+      "lastName": "Müller",
+      "paxType": "ADT",
+      "seat": "8A",
+      "document": { "type": "NATIONAL_ID", "number": "VIC-4400192", "expiryDate": "2028-10-01" },
+      "notes": []
+    },
+    {
+      "id": "PAX016",
+      "firstName": "Sophie",
+      "lastName": "Dubois",
+      "paxType": "ADT",
+      "seat": "8B",
+      "document": { "type": "PASSPORT", "number": "P5511902", "expiryDate": "2027-11-22" },
+      "notes": []
+    },
+
+    {
+      "id": "PAX017",
+      "firstName": "Leo",
+      "lastName": "Bennett",
+      "paxType": "CHD",
+      "seat": "9A",
+      "document": { "type": "PASSPORT", "number": "P8899001", "expiryDate": "2028-06-30" },
+      "dateOfBirth": "2017-05-22",
+      "travellingWith": "PAX018",
+      "notes": []
+    },
+    {
+      "id": "PAX018",
+      "firstName": "Anna",
+      "lastName": "Bennett",
+      "paxType": "ADT",
+      "seat": "9B",
+      "document": { "type": "PASSPORT", "number": "P8899002", "expiryDate": "2029-07-12" },
+      "notes": []
+    },
+
+    {
+      "id": "PAX019",
+      "firstName": "Max",
+      "lastName": "Schneider",
+      "paxType": "ADT",
+      "seat": "10A",
+      "document": { "type": "PASSPORT", "number": "P0099123", "expiryDate": "2027-09-05" },
+      "notes": []
+    },
+    {
+      "id": "PAX020",
+      "firstName": "Ella",
+      "lastName": "Green",
+      "paxType": "ADT",
+      "seat": "10B",
+      "document": { "type": "NATIONAL_ID", "number": "NSW-5531900", "expiryDate": "2027-12-01" },
+      "notes": []
+    },
+
+    {
+      "id": "PAX021",
+      "firstName": "Oscar",
+      "lastName": "Lee",
+      "paxType": "ADT",
+      "seat": "11A",
+      "document": { "type": "PASSPORT", "number": "P3141592", "expiryDate": "2029-02-28" },
+      "notes": []
+    },
+    {
+      "id": "PAX022",
+      "firstName": "Zoe",
+      "lastName": "Lee",
+      "paxType": "INF",
+      "seat": null,
+      "document": { "type": "PASSPORT", "number": "P3141593", "expiryDate": "2027-01-15" },
+      "dateOfBirth": "2024-01-03",
+      "travellingWith": "PAX021",
+      "notes": []
+    },
+
+    {
+      "id": "PAX023",
+      "firstName": "William",
+      "lastName": "Anderson",
+      "paxType": "ADT",
+      "seat": "11B",
+      "document": { "type": "PASSPORT", "number": "P2718281", "expiryDate": "2028-05-20" },
+      "notes": []
+    },
+    {
+      "id": "PAX024",
+      "firstName": "Nina",
+      "lastName": "Karlsson",
+      "paxType": "ADT",
+      "seat": "12A",
+      "document": { "type": "PASSPORT", "number": "P8080133", "expiryDate": "2028-08-08" },
+      "mealPreferences": [{ "code": "LFML", "text": "Low-fat meal" }],
+      "notes": []
+    },
+    {
+      "id": "PAX025",
+      "firstName": "Tom",
+      "lastName": "Evans",
+      "paxType": "ADT",
+      "seat": "12B",
+      "document": { "type": "PASSPORT", "number": "P1928374", "expiryDate": "2030-01-01" },
+      "notes": []
+    },
+
+    {
+      "id": "PAX026",
+      "firstName": "Hannah",
+      "lastName": "Cooper",
+      "paxType": "ADT",
+      "seat": "13A",
+      "document": { "type": "NATIONAL_ID", "number": "VIC-6633001", "expiryDate": "2027-03-03" },
+      "specialAssistance": [{ "code": "WCHS", "text": "Wheelchair (steps)" }],
+      "notes": []
+    },
+    {
+      "id": "PAX027",
+      "firstName": "Arjun",
+      "lastName": "Patel",
+      "paxType": "ADT",
+      "seat": "13B",
+      "document": { "type": "PASSPORT", "number": "P9090909", "expiryDate": "2027-10-10" },
+      "notes": []
+    },
+
+    {
+      "id": "PAX028",
+      "firstName": "Fatima",
+      "lastName": "Khan",
+      "paxType": "ADT",
+      "seat": "14A",
+      "document": { "type": "PASSPORT", "number": "P1212121", "expiryDate": "2028-09-09" },
+      "mealPreferences": [{ "code": "HNML", "text": "Hindu meal" }],
+      "notes": []
+    },
+    {
+      "id": "PAX029",
+      "firstName": "James",
+      "lastName": "Walker",
+      "paxType": "ADT",
+      "seat": "14B",
+      "document": { "type": "PASSPORT", "number": "P3434343", "expiryDate": "2029-11-11" },
+      "notes": ["Customer requested aisle seat if available", "Allergic to peanuts (inform cabin crew)"]
+    },
+
+    {
+      "id": "PAX030",
+      "firstName": "Clara",
+      "lastName": "Novak",
+      "paxType": "CHD",
+      "seat": "15A",
+      "document": { "type": "PASSPORT", "number": "P5656565", "expiryDate": "2028-02-02" },
+      "dateOfBirth": "2015-09-14",
+      "travellingWith": "PAX031",
+      "notes": []
+    },
+    {
+      "id": "PAX031",
+      "firstName": "Benjamin",
+      "lastName": "Scott",
+      "paxType": "ADT",
+      "seat": "15B",
+      "document": { "type": "NATIONAL_ID", "number": "NSW-9900112", "expiryDate": "2027-06-06" },
+      "specialAssistance": [{ "code": "DEAF", "text": "Deaf / hard of hearing" }],
+      "notes": []
+    },
+    {
+      "id": "PAX032",
+      "firstName": "Laura",
+      "lastName": "Ribeiro",
+      "paxType": "INF",
+      "seat": null,
+      "document": { "type": "PASSPORT", "number": "P5656566", "expiryDate": "2027-04-04" },
+      "dateOfBirth": "2025-06-20",
+      "travellingWith": "PAX031",
+      "notes": []
+    }
+  ]
+}
