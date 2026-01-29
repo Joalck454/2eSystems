@@ -1,53 +1,143 @@
 /* App.css Begining to implement CSS
 Basic styling for the app  without CSS Frameworks - By Jack Fuhrer */
 
-#root {
-  max-width: 1280px;
+body {
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
-  background: radial-gradient(circle at top left, #f1f1f1 0, #6b7280 50%); 
+  background-color: #eeeeee; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  /* Main app wrapper */
+.app {
+  margin: 20px auto;
+  padding: 16px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
-.FlightInfo {
+.layout {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* ------ Flight Info Card ------ */
+
+.flightInfo {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
- 
-  border-radius: 5px; /* Rounded corners */
-   /* Adjust width as needed */
-  background-color: #E8E2D8; /* White background */
-  margin: 15px; /* Spacing between cards if in a layout */
+  border-radius: 5px; 
+  background-color: #E8E2D8; 
+  margin: 15px; /
 }
 
-.FlightInfo:hover {
+.flightInfo:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  transform: translateY(-5px); /* Subtle lift effect */
+  transform: translateY(-5px); 
 }
 
-.PassengerList {
-  display: flex 1;
-  flex-wrap: wrap;
-  justify-content: center;
-  border-radius: 5px; /* Rounded corners */
-  gap: 10px; /* Space between passenger cards */
+/* ------ Passenger List Layout ------ */
+
+.passengerListContainer {
+  flex: 1;
+}
+.passengerList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.passengerCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 5px; 
+  gap: 10px; 
   transition: 0.3s; 
   border: 1px solid black;
-  margin-bottom: 5px; 
+  margin: 2px; 
+  background: #fafafa;
+  position: relative;
 }
 
-.PassengerList.selected {
+.passengerCard.selected {
   border: 2px solid #646cff; /* Highlight selected card */
-  box-shadow: 0 8px 16px 0 rgba(100, 108, 255, 0.4); /* Glow effect */
+  box-shadow: 0 8px 16px 0 rgba(100, 108, 255, 0.4); 
   background-color: #E8E2D8;
 }
 
-.PassengerList:hover {
+.passengerCard:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  transform: translateY(-5px); /* Subtle lift effect */
+  transform: translateY(-5px); 
+}
+
+/* attention icon */
+.passengerCard img {
+  position: absolute;     
+  top: 4px;               
+  left: 4px;              
+  width: 16px;           
+  height: 16px;           
+}
+
+/* ------ Passenger Details Layout ------ */
+
+.passengerDetails {
+  flex: 1;
+  min-width: 260px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 12px;
+  background: #fafafa;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  overflow-y: auto;
+} 
+
+.passengerDetails p {
+  margin: 8px 0;
+  
+}
+
+.passengerDetails h2 {
+  margin-top: 0;
+}
+
+.documentInfo p {
+  margin: 4px 0;
 }
 
 
-/* .PassengerDetails {
-
-} */
-
 /* Need to finish styling for details, the NEEDS ATTENTION & mobile support */
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .passengerList {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  .passengerCard {
+    padding: 1px;
+    font-size: 0.5rem;
+    margin: 0; 
+  }
+
+  .passengerCard img {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .passengerDetails {
+    order: -1; 
+    margin-top: 0;
+    font-size: 0.5rem;
+    
+  }
+}

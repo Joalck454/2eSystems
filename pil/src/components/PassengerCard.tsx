@@ -1,6 +1,7 @@
 /* PassengerCard.tsx - Jack Fuhrer
-Component to display basic passenger info in a card format.
+Component to display passenger info in a list or card format.
 */ 
+import bulbIcon from '../assets/bulb.png';
 
 export interface Special {
     code: string;
@@ -44,30 +45,42 @@ function PassengerCard( {passenger, onSelect, isSelected} : PassengerCardProps) 
     
     return (
         <div onClick={() => onSelect && onSelect(passenger)} 
-            className={`PassengerList ${isSelected ? 'selected' : ''}`} // template literal to toggle class
-            /* style={{border: '1px solid black', padding: '10px', margin: '10px', cursor: 'pointer' }} */>
-            {showIcon && <img src="./src/assets/bulb.png" width="30" height="20"alt="Assistance Required"/>}
+            className={`passengerCard ${isSelected ? 'selected' : ''}`}>
+            {showIcon && (
+                <img 
+                    src={bulbIcon} 
+                    title="Assistance Required" 
+                    width="30" 
+                    height="20" 
+                    alt="Assistance Required"/>
+                )}
             <h3>
-                {/* passenger.id TEMP REMOVE THIS */} {passenger.firstName} {passenger.lastName} [{passenger.paxType}]<br/> 
+             {passenger.firstName} {passenger.lastName}<br/> 
             </h3>
             <p> 
                 <strong>Seat:</strong> {passenger.seat ? passenger.seat : "Not Assigned"}
             </p>
             {passenger.dateOfBirth && (
-            <p >Date of birth: {passenger.dateOfBirth}</p>)}
-            {passenger.notes && passenger.notes.length > 0 && (
-            <p>Has notes</p>)}
-            {passenger.specialAssistance && passenger.specialAssistance.length > 0 && (
-            <p>Special Assistance Required</p>)}
-            
+            <p> <strong>DOB:</strong> {passenger.dateOfBirth}</p>)}
+            {passenger.travellingWith && (
+            <p> <strong>Travelling With:</strong> {passenger.travellingWith}</p>)}
         </div>
     )
 }
 
 function extra(passenger: Passenger): boolean {
-    /*Note: This function checks if the passenger has any extra requirements 
-        NEED TO CONTINUE THIS
-    */
+    /*Note: This function checks if the passenger has any extra requirements that need attention.*/
+    const haveDocument = passenger.document !== null;
+    if(!haveDocument){
+        return true;
+    }
+    
+    const documentNumber = passenger.document?.number;
+    const documentExpiry = passenger.document?.expiryDate;
+    //if missing document number or expiry date
+    if(!documentNumber || !documentExpiry){
+        return true;
+    }
 
     //if missing seat
     if(!passenger.seat){
@@ -84,7 +97,7 @@ function extra(passenger: Passenger): boolean {
         return true;
     }
 
-    //if mealpreferences
+    //if meal preferences
     if(passenger.mealPreferences && passenger.mealPreferences.length > 0){
         return true;
     }
