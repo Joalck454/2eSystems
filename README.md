@@ -4,15 +4,15 @@
 
 Hi William &  Aleksandar , 
 
-I've successfully implemented all the minimum expectations from the guide and tried to include some bonus features, aiming for a realistic delivery within the deadline. I truly enjoyed building this and appreciate the opportunity to get this far!
+I've successfully implemented all the minimum expectations from the guide and tried to include some bonus features, aiming for a realistic delivery within the deadline while working on this in-between my current full time job. I truly enjoyed building this and appreciate the opportunity to get this far!
 
-I made a conscious effort to focus on core React/TypeScript implementation and logic, rather than relying on external libraries like CSS frameworks or AI code generation. This allowed me to demonstrate my foundational understanding.
+I made a conscious effort to focus on core React/TypeScript implementation and logic, rather than relying on external libraries like CSS frameworks or AI code generation. This allowed me to demonstrate my foundational understanding. 
 
 ### Stack - React / Typescript 
 
 I have created this project using npm create-vite@latest .. 
 
-<img align="centre" width="199" height="232" alt="image" src="https://github.com/user-attachments/assets/f50d9180-5b3a-40f8-993e-76096f8a23fd" />
+<img width="199" height="232" alt="image" src="https://github.com/user-attachments/assets/f50d9180-5b3a-40f8-993e-76096f8a23fd" />
 
 
 ## How to run the project 
@@ -36,8 +36,12 @@ I have created this project using npm create-vite@latest ..
 *   **Flight Information Header:** Key flight details are  displayed at the top of the application. (Bonus) 
 *   **Selected Card Highlight:** The currently selected passenger card in the list is visually highlighted for clear user feedback.
 *   **Basic Mobile Support**: Enabled some accessibility options for mobile support (<768px)
-*   **Modularity -** I created a utlity.ts file, this was lastly made as I had two functions within the component files [ isDocumentExpired ] [ extra ] functions. 
+*   **Modularity -** I created a validCheck.ts file, this was lastly made as I had two functions within the component files [ isDocumentExpired ] [ extra ] functions. 
 
+## What did I not implement
+- I unfortunately was unable to finalise any of the Bonus tasks. I had prioritised ensuring all core aspects were achieved and working properly, then if time was okay I'd of expanded to the bonus tasks.  
+- Implementing a search bar (to filter by name) and potentially a toggle for "Show only passengers needing attention"  (I begun this but ran out of time)
+- Unit tests such as Jest for automated testing 
 
 ## What I would Improve  
 *   **Styling -** I initially avoided frameworks to demonstrate raw CSS skills, but in hindsight I should have utilised them to better my time efficiency for this project as I did spend unforeseen time towards the end trying to layout the webpage. 
