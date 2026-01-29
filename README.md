@@ -20,7 +20,7 @@ I have created this project using npm create-vite@latest ..
    
    i.```git clone <https://github.com/Joalck454/2eSystems.git>```
    
-   ii. ```cd to <../pil>```
+   ii. ```cd to <pil>```
    
  3. ```npm install```
  4. ```npm run dev```
