@@ -45,9 +45,9 @@ I have created this project using npm create-vite@latest ..
 
 ## What I would Improve  
 *   **Styling -** I initially avoided frameworks to demonstrate raw CSS skills, but in hindsight I should have utilised them to better my time efficiency for this project as I did spend unforeseen time towards the end trying to layout the webpage. 
-*   **Modularity -** I was begining to implement a search function, to reduce issues I created it first within App.tsx file, this just helps with implementation, once working I then 
+*   **Modularity -** I was begining to implement a search function, to reduce issues I created it first within App.tsx file instead of starting it off in a seperate component. 
 *   **More Optional Bonus' -** I focused too much on achieving properly the core aspects (MVP) and didn't allow myself to think of how to prepare more of the Bonus Tasks.  
-*   **For Production environments: A Simple API -** I understand that importing directly of .json files would be replaced by async data fetching. I saw this was a Bonus feature but rather focus on the essentials.  
+*   **For Production environments: A Simple API -** I understand that importing directly of .json files would be replaced by async data fetching. I saw this was a Bonus feature but decided focus on the essentials.  
 
 
 Due to realisitic time constraints (expectation of time was 6ish hours). I aimed to be realistic in what I knew, and what I think I could implement. 
