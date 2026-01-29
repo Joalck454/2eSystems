@@ -18,12 +18,12 @@ I have created this project using npm create-vite@latest ..
 ## How to run the project 
 1. Clone this repo
    
-   i. git clone <https://github.com/Joalck454/2eSystems.git>
+   i.```git clone <https://github.com/Joalck454/2eSystems.git>```
    
-   ii. cd to directory
+   ii. ```cd to <dir>```
    
- 3. npm install
- 4. npm run dev
+ 3. ```npm install```
+ 4. ```npm run dev```
     
 **Once running the application should be running at  http://localhost:5173**
 
