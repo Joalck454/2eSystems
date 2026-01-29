@@ -1,3 +1,7 @@
+/* PassengerDetails.tsx - Jack Fuhrer
+Component to display detailed passenger info when selected.
+*/
+
 import type { Passenger } from './PassengerCard';
 
 interface PassengerDetailsProps {
@@ -6,20 +10,23 @@ interface PassengerDetailsProps {
 
 function PassengerDetails({ passenger }: PassengerDetailsProps) {
 
-    if(!passenger) {
-        return <div>No passenger selected.</div>;
+    if (!passenger) { // No passenger selected with basic placeholder
+        return <div style={{ border: '1px solid black', padding: '100px', margin: '10px', height: '100px', width: '300px' }}>No passenger selected.</div>;
     }
 
-    return (
-        <div style={{border: '1px solid black', padding: '100px', margin: '10px', height: '300px', width: '300px'}}>
+    return ( // Display detailed info for selected passenger
+        <div style={{ border: '1px solid black', padding: '100px', margin: '10px', height: '300px', width: '300px' }}>
             <h2>Passenger Details</h2>
             <p><strong>Name:</strong> {passenger.firstName} {passenger.lastName}</p>
             <p><strong>Type:</strong> {passenger.paxType}</p>
             <p><strong>Seat:</strong> {passenger.seat ? passenger.seat : "Not Assigned"}</p>
+            {passenger.dateOfBirth && (
+                <p><strong>Date of Birth:</strong> {passenger.dateOfBirth}</p>
+            )}
             <div>
                 <h3>Document:</h3>
-                {passenger.document ? (
-                    <div>
+                {passenger.document ? ( // Check if document exists / prefill info incase missing
+                    <div style={{ display: "flex" }}   >
                         <p><strong>Type: </strong> {passenger.document.type}</p>
                         <p><strong>Number: </strong> {passenger.document.number || "Not Provided"}</p>
                         <p><strong>Expiry Date: </strong> {passenger.document.expiryDate || "Not Provided"}</p>
@@ -28,9 +35,18 @@ function PassengerDetails({ passenger }: PassengerDetailsProps) {
                     <p>No document information available.</p>
                 )}
             </div>
-            {passenger.dateOfBirth && (
-                <p><strong>Date of Birth:</strong> {passenger.dateOfBirth}</p>
-            )}
+            <div> {/* If Any Special Criteria is met, display here */}
+                {passenger.notes && passenger.notes.length > 0 && (
+                    <p><strong>Notes:</strong><br />{passenger.notes.join(", ")}</p>)}
+                {passenger.specialAssistance && passenger.specialAssistance.length > 0 && (
+                    <p><strong>Special Assistance Required:</strong><br />{passenger.specialAssistance.map(sa => sa.text).join(", ")}</p>)}
+                {passenger.mealPreferences && passenger.mealPreferences.length > 0 && (
+                    <p><strong>Meal Preferences:</strong><br />{passenger.mealPreferences.map(mp => mp.text).join(", ")}</p>)}
+                {passenger.travellingWith && (
+                    <p><strong>Travelling With:</strong> {passenger.travellingWith}</p>)}
+            </div>
+
+
         </div>
     );
 }

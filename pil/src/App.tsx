@@ -5,49 +5,60 @@ import data from './data/data.json';
 import PassengerCard, { type Passenger } from './components/PassengerCard';
 import PassengerDetails from './components/PassengerDetails';
 
+
+interface Flight {
+  flightNumber: string;
+  from: string;
+  to: string;
+  departureTime: string;
+  aircraftType: string;
+}
+
+
 function App() {
   // const [count, setCount] = useState(0);
   const [passengers, setPassengers] = useState<Passenger[]>([]); //
   const [selectedPassenger, setSelectedPassenger] = useState<Passenger | null>(null); // New state for selected passenger 
 
+  // Add Flight info state (May add to as component later)
+  const [flight, setFlight] = useState<Flight | null>(null); 
+
 
   useEffect(() => {
-    // data.passengers comes from your JSON
-    setPassengers(data.passengers as Passenger[]);
+    // data.passengers comes from JSON
+    setPassengers(data.passengers as Passenger[]); // Set passengers from data
+    setFlight(data.flight as Flight); // Set flight info
   }, []);
 
   return (
     <>
       <div> <h1>Passenger Management</h1> {/*/ Temp Heading */}
-        <div style={{ display: "flex", gap: "20px" }}>
-
-          <div>
+      <div>
+        {flight && (
+          <div className='FlightInfo'>
+            <h2>Flight Information</h2>
+            <p><strong>Flight Number:</strong> {flight.flightNumber}</p>
+            <p><strong>From:</strong> {flight.from}</p>
+            <p><strong>To:</strong> {flight.to}</p>
+            <p><strong>Departure Time:</strong> {flight.departureTime}</p>
+            <p><strong>Aircraft Type:</strong> {flight.aircraftType}</p>
+          </div>
+        )}
+      </div>
+        <div style={{ display: "flex",  gap: "20px" }}>
+          <div style={{ display: "flex 1",  padding: "10px" }}>
             {passengers.map((pax) => (
               <PassengerCard
                 key={pax.id}
                 passenger={pax}
-                onSelect={(s) => setSelectedPassenger(s)} />
+                onSelect={(s) => setSelectedPassenger(s)} // Set selected passenger on click
+                isSelected={selectedPassenger?.id === pax.id} // check if this card is selected
+                 />
             ))}
           </div>
-
-          <div>
+          <div className='PassengerDetails'>
             <PassengerDetails passenger={selectedPassenger} />
           </div>
-
-
-          {/* <h1>Vite + React</h1>
-        <div className="card">
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p> */}
-
         </div>
       </div>
     </>
@@ -55,3 +66,6 @@ function App() {
 }
 
 export default App
+
+
+
