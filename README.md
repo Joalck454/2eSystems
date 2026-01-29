@@ -46,8 +46,8 @@ I have created this project using npm create-vite@latest ..
 *   **For Production environments: A Simple API -** I understand that importing directly of .json files would be replaced by async data fetching. I saw this was a Bonus feature but rather focus on the essentials.  
 
 
-Due to realisitic time constraints (expectation of time was 6ish hours). I had to be realistic in what I knew, and what I think I could implement. 
-I think, similairly to what was said in the interview is that scopeing the task and breaking everything down to its core elements are the most important before starting. 
+Due to realisitic time constraints (expectation of time was 6ish hours). I aimed to be realistic in what I knew, and what I think I could implement. 
+I think, similairly to what was said in the interview is that scoping the task and breaking everything down to its core elements are the most important before starting. 
 
 
 
