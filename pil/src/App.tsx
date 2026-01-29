@@ -21,12 +21,19 @@ function App() {
   // Add Flight info state (May add to as component later)
   const [flight, setFlight] = useState<Flight | null>(null);
 
+  const [searchName, setSearchName] = useState(""); // Search by name
 
   useEffect(() => {
     // data.passengers comes from JSON
     setPassengers(data.passengers as Passenger[]); // Set passengers from data
     setFlight(data.flight as Flight); // Set flight info
   }, []);
+
+  /* Work in Progress - a Search Filter*/
+  const filteredPassengers = passengers.filter(pax =>
+    pax.firstName.toLowerCase().includes(searchName.toLowerCase()) ||
+    pax.lastName.toLowerCase().includes(searchName.toLowerCase())
+  );
 
   return (
     <div className="app">
@@ -42,9 +49,19 @@ function App() {
         </div>
       )}
 
-      <h1>Passenger Management</h1> 
+      <h1>Passenger Management</h1>
+      {/* <div className='searchBar'>
+        <input 
+          type="text" 
+          placeholder="Search by name..." 
+          value={searchName} 
+          onChange={(e) => setSearchName(e.target.value)} 
+        />
+      </div> */}
+
       <div className='layout'>
         <div className='passengerListContainer'>
+
           <div className='passengerList'>
             {passengers.length === 0 ? (
               <p>No passengers found.</p>
